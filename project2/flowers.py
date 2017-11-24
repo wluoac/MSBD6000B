@@ -80,9 +80,8 @@ def train(epochs):
     
     f = open('project2_08573584.txt', 'w')
     for i in range(len(name_test)):
-        thePrediction = Y_pred[i]
-        nonzeroind = thePrediction.argmax(axis=0)
-        f.write(str(nonzeroind) + '\n')
+        predict = Y_pred[i].argmax(axis=0)
+        f.write(str(predict) + '\n')
     f.close()
 
 
